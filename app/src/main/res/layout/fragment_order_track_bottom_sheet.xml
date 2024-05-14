@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/CustomBottomSheetDialog"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.order.orderTrackBottomSheetFragment">
+
+
+    <TextView
+        android:id="@+id/requestID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="13dp"
+        android:fontFamily="@font/clean_bold"
+        android:text="Request #5678"
+        android:textColor="@color/blue"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+<LinearLayout
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginStart="105dp"
+    android:layout_marginEnd="105dp"
+    android:layout_marginTop="13dp"
+    android:weightSum="2"
+    app:layout_constraintHorizontal_bias="0.346"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/requestID">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/clean_bold"
+        android:text="15 min"
+        android:textColor="@color/blue"
+        android:textSize="25sp"
+    />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/clean_bold"
+            android:text="Time"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/gray"
+            android:textSize="10sp"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/distane"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/clean_bold"
+        android:text="0.5 km"
+        android:textColor="@color/blue"
+        android:textSize="25sp"
+ />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/clean_bold"
+            android:text="Distance"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/gray"
+            android:textSize="10sp"
+            />
+    </LinearLayout>
+</LinearLayout>
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/clean_regular"
+                android:text="Request Name:"
+                android:textColor="@color/gray"
+                android:textSize="12dp"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:fontFamily="@font/clean_bold"
+                android:text="Ahmad Majed"
+
+                />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="6dp">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/clean_regular"
+                android:text="Request Location:"
+                android:textColor="@color/gray"
+                android:textSize="12dp"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:fontFamily="@font/clean_bold"
+                android:text="Khilda, Amman"
+
+                />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="6dp">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/clean_regular"
+                android:text="Delivery Location:"
+                android:textColor="@color/gray"
+                android:textSize="12dp"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:fontFamily="@font/clean_bold"
+                android:text="Ahmad Majed"
+
+                />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="6dp">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/clean_regular"
+                android:text="Order Amount:"
+                android:textColor="@color/gray"
+                android:textSize="12dp"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:fontFamily="@font/clean_bold"
+                android:text="Ahmad Majed"
+
+                />
+        </TableRow>
+
+
+    </TableLayout>
+    <TextView
+        android:id="@+id/deliveryType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_weight="1"
+        android:textColor="@color/green"
+        android:fontFamily="@font/clean_bold"
+        android:text="Free-time Delivery"
+        app:layout_constraintTop_toBottomOf="@id/tableLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <TextView
+        android:id="@+id/deliveryAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue2"
+        android:fontFamily="@font/clean_bold"
+        android:text="3.00 JD"
+        app:layout_constraintTop_toBottomOf="@id/deliveryType"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
+
+
+    <LinearLayout
+        android:id="@+id/getDirectionAndArrived"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="20dp"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/deliveryAmount"
+        app:layout_constraintVertical_bias="0.359">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/getdirection"
+            android:layout_width="114dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/cairo_bold"
+            android:backgroundTint="@color/blue"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:text="Get Directions"
+            android:textAllCaps="false"
+            android:textSize="11dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/Arrived"
+            android:layout_width="114dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/green"
+            android:fontFamily="@font/cairo_bold"
+            android:gravity="center"
+            android:text="Arrived"
+            android:textAllCaps="false"
+            android:textSize="11dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:weightSum="2"
+        android:layout_marginStart="19dp"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/getDirectionAndArrived">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/callRequest"
+            android:layout_width="114dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/blue2"
+            android:fontFamily="@font/cairo_bold"
+            android:gravity="center"
+            android:text="Call Request"
+            android:textAllCaps="false"
+            android:textSize="11dp"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancelRequest"
+            android:layout_width="114dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/reed"
+            android:fontFamily="@font/cairo_bold"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:text="Cancel Request"
+            android:textAllCaps="false"
+            android:textSize="11dp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

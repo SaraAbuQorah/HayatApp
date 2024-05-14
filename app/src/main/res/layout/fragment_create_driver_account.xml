@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+
+    </data>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.regetir.CreateDriverAccountFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/next"
+        android:layout_width="22dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/next"
+        setItemOnClickArrowBack="@{(v) -> click.onClick(v)}"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/createAccountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="28dp"
+        android:text="Create an Account"
+        android:textColor="@color/black"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/clean_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/next" />
+
+    <TextView
+        android:id="@+id/joinTeanText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/clean_regular"
+        android:text="Join HayatLane family and enjoy a hustle-free delivery"
+        android:textColor="@color/gray"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createAccountText" />
+
+    <TextView
+        android:id="@+id/uploadOneText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/clean_regular"
+        android:text="Please Upload One of the following:"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.025"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/joinTeanText" />
+
+
+    <TextView
+        android:id="@+id/drivingLicenseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/clean_regular"
+        android:text="Driving License"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/uploadOneText" />
+
+    <LinearLayout
+        android:id="@+id/drivingLicenseLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="vertical"
+        android:layout_marginTop="6dp"
+        android:background="@color/gray1"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/drivingLicenseText">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/dashed_border"
+        android:gravity="center"
+        android:orientation="vertical">
+
+    <ImageView
+            android:layout_width="22sp"
+            android:layout_height="16dp"
+            android:src="@drawable/license"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11dp"
+            android:fontFamily="@font/clean_regular"
+            android:textColor="@color/gray"
+            android:text="Capture the Driving License card"/>
+
+    </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/carIdText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/clean_regular"
+        android:text="Car ID"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/drivingLicenseLayout" />
+
+    <LinearLayout
+        android:id="@+id/cardIdLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="vertical"
+        android:layout_marginTop="6dp"
+        android:background="@color/gray1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/carIdText">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/dashed_border"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="22sp"
+                android:layout_height="16dp"
+                android:src="@drawable/license"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11dp"
+                android:fontFamily="@font/clean_regular"
+                android:textColor="@color/gray"
+                android:text="Capture the car ID card"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/carTypeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/clean_regular"
+        android:text="Car Type"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardIdLayout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:boxCornerRadiusTopStart="9dp"
+        app:boxCornerRadiusTopEnd="9dp"
+        app:boxCornerRadiusBottomStart="9dp"
+        app:boxCornerRadiusBottomEnd="9dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/carTypeText"
+        >
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="6dp"
+            android:background="@color/gray1"
+            android:inputType="none"
+            android:text="Select your car type"
+            android:textColor="@color/gray"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/iamAvailableCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="24dp"
+        android:text="I’m Available for Instant Delivery"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:fontFamily="@font/clean_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/list" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/iamPreparedText"
+            android:layout_width="314dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/clean_regular"
+            android:text="I’m Prepared to Conduct Deliveries to all region within the Kingdom."
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iamAvailableCheckBox" />
+
+        <TextView
+    android:id="@+id/selectRegion"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="If not, please select preferred regions"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/iamPreparedText"
+    android:textSize="15dp"
+    android:layout_marginStart="30dp"
+    android:textColor="@color/black"
+    android:fontFamily="@font/clean_regular"
+    android:layout_marginTop="13dp"
+    />
+    <LinearLayout
+        android:id="@+id/firstLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="36dp"
+        android:weightSum="3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selectRegion"
+        android:orientation="horizontal">
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/amman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:fontFamily="@font/clean_regular"
+        android:text="Amman"
+        android:layout_weight="1"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        />
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/balqaa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/clean_regular"
+            android:text="Balqaa’"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            />
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/Ajloun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/clean_regular"
+            android:text="Ajloun"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/secLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="36dp"
+        android:weightSum="3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/firstLayout"
+        android:orientation="horizontal">
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/irbid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/clean_regular"
+            android:text="Irbid"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            />
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/zarqaa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/clean_regular"
+            android:text="Zarqaa’"
+            android:layout_marginStart="26dp"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            />
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/mafraq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/clean_regular"
+            android:text="Mafraq"
+            android:layout_marginStart="3dp"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/thirdLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="36dp"
+        android:weightSum="3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/secLayout"
+        android:orientation="horizontal">
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/jerash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/clean_regular"
+            android:text="Jerash"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            />
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/Karak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/clean_regular"
+            android:text="karak"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            />
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/tafilah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/clean_regular"
+            android:text="Tafilah"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/forthLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="36dp"
+        android:weightSum="3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/thirdLayout"
+        android:orientation="horizontal">
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/madaba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/clean_regular"
+            android:text="Madaba"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            />
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/maan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/clean_regular"
+            android:text="Ma’an"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            />
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/aqaba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/clean_regular"
+            android:text="Aqaba"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            />
+    </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/letsGo_Button"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/cairo_bold"
+            android:text="Let’s Start"
+            android:textAllCaps="false"
+            android:textSize="13dp"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/forthLayout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+</layout>

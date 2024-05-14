@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/userTypeLogInFragment">
+
+
+    <fragment
+        android:id="@+id/createDriverAccountFragment"
+        android:name="com.example.hayatapp.ui.regetir.CreateDriverAccountFragment"
+        android:label="fragment_create_driver_account"
+        tools:layout="@layout/fragment_create_driver_account" >
+        <action
+            android:id="@+id/action_createDriverAccountFragment_to_homeMApFragment"
+            app:destination="@id/homeMApFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userTypeLogInFragment"
+        android:name="com.example.hayatapp.ui.regetir.UserTypeLogInFragment"
+        android:label="fragment_user_type_log_in"
+        tools:layout="@layout/fragment_user_type_log_in" >
+        <action
+            android:id="@+id/action_userTypeLogInFragment_to_createDriverAccountFragment"
+            app:destination="@id/createDriverAccountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeMApFragment"
+        android:name="com.example.hayatapp.ui.home.HomeMApFragment"
+        android:label="fragment_home_m_ap"
+        tools:layout="@layout/fragment_home_m_ap" >
+        <action
+            android:id="@+id/action_homeMApFragment_to_requestOrderListFragment"
+            app:destination="@id/requestOrderListFragment" />
+        <action
+            android:id="@+id/action_homeMApFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeMApFragment_to_orderTrackBottomSheetFragment"
+            app:destination="@id/orderTrackBottomSheetFragment" />
+        <action
+            android:id="@+id/action_homeMApFragment_to_newRequestBottomSheetFragment"
+            app:destination="@id/newRequestBottomSheetFragment" />
+        <action
+            android:id="@+id/action_homeMApFragment_to_newRequestPopUpFragment"
+            app:destination="@id/newRequestPopUpFragment" />
+        <action
+            android:id="@+id/action_homeMApFragment_to_offlineModeDeniedFragment"
+            app:destination="@id/offlineModeDeniedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/requestOrderListFragment"
+        android:name="com.example.hayatapp.ui.requestOrder.RequestOrderListFragment"
+        android:label="fragment_request_order_list"
+        tools:layout="@layout/fragment_request_order_list" >
+        <action
+            android:id="@+id/action_requestOrderListFragment_to_acceptBottomDialogFragment"
+            app:destination="@id/acceptBottomDialogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.hayatapp.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_updateProfileFragment"
+            app:destination="@id/updateProfileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_notificationListFragment"
+            app:destination="@id/notificationListFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_deleteAccountBottomFragment"
+            app:destination="@id/deleteAccountBottomFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_logOutBottomFragment"
+            app:destination="@id/logOutBottomFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_deleteAccountDeniedBottomFragment"
+            app:destination="@id/deleteAccountDeniedBottomFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_aboutUsFragment"
+            app:destination="@id/aboutUsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_walletFragment"
+            app:destination="@id/walletFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_pastOrdersFragment"
+            app:destination="@id/pastOrdersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateProfileFragment"
+        android:name="com.example.hayatapp.ui.profile.UpdateProfileFragment"
+        android:label="fragment_update_profile"
+        tools:layout="@layout/fragment_update_profile" />
+    <fragment
+        android:id="@+id/notificationListFragment"
+        android:name="com.example.hayatapp.ui.notification.NotificationListFragment"
+        android:label="fragment_notification_list"
+        tools:layout="@layout/fragment_notification_list" />
+    <fragment
+        android:id="@+id/pastOrdersFragment"
+        android:name="com.example.hayatapp.ui.order.pastOrdersFragment"
+        android:label="fragment_past_orders"
+        tools:layout="@layout/fragment_past_orders" />
+    <dialog
+        android:id="@+id/deleteAccountBottomFragment"
+        android:name="com.example.hayatapp.ui.profile.DeleteAccountBottomFragment"
+        android:label="fragment_delete_account_bottom"
+        tools:layout="@layout/fragment_delete_account_bottom" />
+    <dialog
+        android:id="@+id/orderTrackBottomSheetFragment"
+        android:name="com.example.hayatapp.ui.order.orderTrackBottomSheetFragment"
+        android:label="fragment_order_track_bottom_sheet"
+        tools:layout="@layout/fragment_order_track_bottom_sheet" >
+        <action
+            android:id="@+id/action_orderTrackBottomSheetFragment_to_callBottomFragment"
+            app:destination="@id/callBottomFragment" />
+        <action
+            android:id="@+id/action_orderTrackBottomSheetFragment_to_cancelRequestBottomFragment"
+            app:destination="@id/cancelRequestBottomFragment" />
+        <action
+            android:id="@+id/action_orderTrackBottomSheetFragment_to_cancelRequestBottomFragment2"
+            app:destination="@id/cancelRequestBottomFragment" />
+    </dialog>
+    <dialog
+        android:id="@+id/callBottomFragment"
+        android:name="com.example.hayatapp.ui.order.CallBottomFragment"
+        android:label="fragment_call_bottom"
+        tools:layout="@layout/fragment_call_bottom" />
+    <dialog
+        android:id="@+id/cancelRequestBottomFragment"
+        android:name="com.example.hayatapp.ui.order.CancelRequestBottomFragment"
+        android:label="fragment_cancel_request_bottom"
+        tools:layout="@layout/fragment_cancel_request_bottom" />
+    <dialog
+        android:id="@+id/logOutBottomFragment"
+        android:name="com.example.hayatapp.ui.profile.LogOutBottomFragment"
+        android:label="fragment_log_out_bottom"
+        tools:layout="@layout/fragment_log_out_bottom" />
+    <dialog
+        android:id="@+id/deleteAccountDeniedBottomFragment"
+        android:name="com.example.hayatapp.ui.profile.DeleteAccountDeniedBottomFragment"
+        android:label="fragment_delete_account_denied_bottom"
+        tools:layout="@layout/fragment_delete_account_denied_bottom" />
+    <dialog
+        android:id="@+id/offlineModeDeniedFragment"
+        android:name="com.example.hayatapp.ui.home.OfflineModeDeniedFragment"
+        android:label="fragment_offline_mode_denied"
+        tools:layout="@layout/fragment_offline_mode_denied" />
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="com.example.hayatapp.ui.aboutus.AboutUsFragment"
+        android:label="fragment_about_us"
+        tools:layout="@layout/fragment_about_us" />
+    <fragment
+        android:id="@+id/walletFragment"
+        android:name="com.example.hayatapp.ui.wallet.walletFragment"
+        android:label="fragment_wallet"
+        tools:layout="@layout/fragment_wallet" />
+    <dialog
+        android:id="@+id/newRequestBottomSheetFragment"
+        android:name="com.example.hayatapp.ui.requestOrder.NewRequestBottomSheetFragment"
+        android:label="fragment_new_request_bottom_sheet"
+        tools:layout="@layout/fragment_new_request_bottom_sheet" />
+    <dialog
+        android:id="@+id/acceptBottomDialogFragment"
+        android:name="com.example.hayatapp.ui.requestOrder.AcceptBottomDialogFragment"
+        android:label="fragment_accept_bottom_dialog"
+        tools:layout="@layout/fragment_accept_bottom_dialog" />
+    <dialog
+        android:id="@+id/logOutDeniedFragment"
+        android:name="com.example.hayatapp.ui.profile.LogOutDeniedFragment"
+        android:label="fragment_log_out_denied"
+        tools:layout="@layout/fragment_log_out_denied" />
+    <fragment
+        android:id="@+id/newRequestPopUpFragment"
+        android:name="com.example.hayatapp.ui.requestOrder.NewRequestPopUpFragment"
+        android:label="NewRequestPopUpFragment" />
+</navigation>
